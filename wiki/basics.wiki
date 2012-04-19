@@ -15,6 +15,11 @@ var el = k24.get("div2").element
 alert('el: '+el)
 alert(k24.get("div2").element.id)
 
+k24.click('div2',
+   function f4(){
+   alert('a Div: '+ this.innerHTML) 
+}) 
+
 function f2(){
 alert(arguments[1].name)
  //alert('generic: '+ this.value + ' / bound data: ' +this.data) 
