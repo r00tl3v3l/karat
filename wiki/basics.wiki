@@ -1,0 +1,41 @@
+karat examples:
+
+var myArray = new Array('a','b','c','d','e','f')
+alert( k24.mdim(myArray, 2)[2] )
+
+k24.group('config.js', 'click')
+
+function retrievedElement(el){
+ alert('element retreived: ' +el)
+}
+
+k24.get("div2").pass( retrievedElement )
+var el = k24.get("div2").element
+
+alert('el: '+el)
+alert(k24.get("div2").element.id)
+
+function f2(){
+alert(arguments[1].name)
+ //alert('generic: '+ this.value + ' / bound data: ' +this.data) 
+}
+
+function f5(){
+ alert('f5 called' +arguments[0])
+ }
+ function  myOtherFunc(){
+  alert(' myOtherFunc '+this)
+  }
+
+k24.click('btn3', f5, myOtherFunc ) 
+
+k24.click('btn3', f5, true).show('v')
+k24.click('div2', f5, true).set('k24 rocks citizen!')
+
+k24.click('btn3', f5).show('v')
+
+k24.click('div2', f4, true).swap( btn1, btn2 )
+
+k24.click('div2', f1).mdim(myArray, 2)
+
+k24.click('div2', f2).get("btn1").pass(f5)
